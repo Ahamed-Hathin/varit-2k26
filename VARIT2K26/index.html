@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="College Symposium 2025 - Join us for an exciting event">
+    <title>VARIT 2K26</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <div class="logo-group d-flex align-items-center">
+                    <img src="images/ChatGPT_Image_Dec_11__2025__10_52_55_PM-removebg-preview.png" class="varit-logo"
+                        alt="VARIT 2K26 Logo">
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-logos d-flex justify-content-center align-items-center mb-4">
+                    <img src="images/JMC_Logo.png" class="hero-crest-logo" alt="Jamal Mohamed College">
+                    <img src="images/JMC resized.png" class="hero-jubilee-logo" alt="Platinum Jubilee 75 Years">
+                </div>
+                <h2 class="college-name">JAMAL MOHAMED COLLEGE</h2>
+                <p class="college-subtitle">(Autonomous)</p>
+                <h1 class="hero-title">VARIT 2K26</h1>
+
+                <!-- Countdown Timer -->
+                <div class="countdown-timer" id="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="days">00</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="hours">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="minutes">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="seconds">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+
+                <a href="https://forms.gle/gxpwHkDaUxUPXzfPA" class="btn btn-primary btn-lg cta-button">Register now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center head-titile" data-aos="fade-up">About</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="about-image-wrapper">
+                        <img src="images/about1.jpg" alt="VARIT Symposium" class="about-image">
+                        <div class="about-image-overlay"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="about-content">
+                        <h3 class="about-subtitle">National Level Technical Symposium</h3>
+                        <p class="about-text">
+                            VARIT stands for a combination of various IT-related events. The name was coined in 2011 by
+                            students of our IT department. The first VARIT event was conducted in 2011 and has since
+                            been held annually, organized by final-year students with support from first-year and
+                            second-year students. How many of us know? Our college does not charge any registration fee
+                            from participants, and we provide food free of cost. VARIT is a proud legacy
+                            of Jamal Mohamed College, organized by the CS, IT, and CA departments.
+                        </p>
+                       
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title text-center head-titile" data-aos="fade-up">Events</h2>
+
+            <div id="events-grid" class="row g-4">
+                <!-- Events will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Modal -->
+    <div class="modal fade" id="eventModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEventTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="event-description" id="modalEventDescription"></p>
+                    <div class="event-category-badge-modal">
+                        <i class="fas fa-tag"></i> <span id="modalEventCategory"></span>
+                    </div>
+                    <div class="event-rules">
+                        <h6><i class="fas fa-list-check"></i> Rules & Regulations</h6>
+                        <ul id="modalEventRules"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Event Rules -->
+    <div class="event-rules">
+        <div class="container my-5 py-3">
+            <h1 class="text-center head-titile">REGISTRATION RULES & <br> REGULATIONS</h1>
+            <h2 class="mt-5 fw-bold">ALL THE PARTICIPANTS ARE COMPULSORILY ADVISED TO READ OUT THE INDIVIDUAL EVENT
+                REGULATIONS WITHOUT FAIL</h2>
+
+            <h2 class="mt-4 ps-4 my-3">General Instruction:</h2>
+            <ul class="fs-5">
+                <li>Maximum of 12 UG (BCA, B. Sc C.S / IT / AI & ML, B. Voc (I.T), B.E (CSE / AI & ML / AI & DS), B.
+                    Tech
+                    (IT)) students can participate from a department.</li>
+                <li>PG Students are strictly not allowed.</li>
+                <li>Only two Departments per college will be permitted. First come First basis</li>
+                <li>A participant cannot take part in more than two events.</li>
+                <li>The participants should must bring their ID card and bring a Bonafide certificate from their
+                    college.
+                </li>
+                <li>No registration Fee.</li>
+                <li>Spot registration is allowed.</li>
+                <li>Lunch and snacks will be provided</li>
+                <li>Prelims will be conducted for all the events, if needed, depending on the entries.</li>
+                <li>The decision of the Judges will be final and binding.</li>
+                <li>The participants should come in neat and formal dress.</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="schedule-section section-padding">
+        <div class="container">
+            <h2 class="section-title text-center head-titile" data-aos="fade-up">SCHEDULE</h2>
+            <div class="schedule-content" data-aos="fade-up" data-aos-delay="200">
+                <div class="schedule-image-wrapper">
+                    <img src="images/SCHEDULE.jpg" alt="VARIT 2K26 Programme Schedule" class="schedule-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+    <div class="container">
+        <h2 class="section-title text-center head-titile" data-aos="fade-up">Get In Touch</h2>
+        <p class="contact-subtitle text-center" data-aos="fade-up" data-aos-delay="100">
+            Have questions about VARIT 2K26? We'd love to hear from you!
+        </p>
+
+        <div class="row g-4 mt-5">
+            <!-- Department Info Card -->
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+                <div class="contact-card main-contact">
+                    <div class="contact-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Department of CA & CS</h3>
+                    <div class="coordinator-info">
+                        <h4>Staff In Charge</h4>
+                        <p class="coordinator-name">DR. S. PEERBASHA</p>
+                        <p class="coordinator-title">Assistant Professor of Computer Application</p>
+                        <a href="tel:+919600466890" class="contact-link">
+                            <i class="fas fa-phone"></i> +91 9600466890
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- College Address Card -->
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+                <div class="contact-card address-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Our Campus</h3>
+                    <div class="address-info">
+                        <p><strong>Jamal Mohamed College</strong></p>
+                        <p>P.Box.No : 808,</p>
+                        <p>#7, Race Course Road,</p>
+                        <p>Khajanagar,</p>
+                        <p>Tiruchirappalli-620 020</p>
+                        <p>Tamil Nadu, India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Social Media Section -->
+        <div class="social-section" data-aos="fade-up" data-aos-delay="700">
+            <h3 class="social-title head-titile">Follow Us on Instagram</h3>
+            <p class="social-subtitle">Stay updated with the latest news and announcements</p>
+            <div class="social-links">
+
+                <a href="https://www.instagram.com/varit__2k26/" class="btn d-flex align-items-center gap-2">
+                    <i class="fab fa-instagram"></i>
+                    <span class="text-light ">VARIT2K26</span>
+                </a>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+    <!-- Footer -->
+    <div class="container text-center mt-5 pt-4 footer">
+        <p>Copyright &copy; Varit 2k25 All rights reserved |
+            <i class="fa-solid fa-heart"></i>
+            <a href="https://www.instagram.com/ahamed_hathin/"> Ahamed Hathin</a>
+        </p>
+    </div>
+    </section>
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/data.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
